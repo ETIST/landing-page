@@ -1,0 +1,59 @@
+/* Progress Tracker */
+.progress-tracker {
+  position: fixed;
+  top: 50%;
+  right: 14px;
+  z-index: 2000;
+}
+.progress-tracker.hide {
+  width: 0px;
+}
+.progress-tracker.hide ul li .pt-description,
+.progress-tracker.hide.active ul li .pt-description,
+.progress-tracker.hide.constant ul li.active .pt-description {
+  display: none;
+}
+.progress-tracker ul li {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  background-color: #f4f4f4;
+  border: 2px solid #f4f4f4;
+  margin-bottom: 10px;
+  list-style-type: none;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.progress-tracker ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.progress-tracker ul li .pt-description {
+  display: none;
+  width: 150px;
+  position: absolute;
+  top: -2px;
+  right: 25px;
+}
+.progress-tracker ul li .pt-description span {
+  float: right;
+  text-align: right;
+  background-color: #f4f4f4;
+  padding: 4px 10px;
+  margin-top: -6px;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  display: none;
+  
+}
+.progress-tracker ul li.active {
+  background: none;
+  border-color: #f4f4f4;
+}
+.progress-tracker.constant ul li.active .pt-description {
+  display: block;
+}
